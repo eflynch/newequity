@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <header>Co-operative Mortgage Scheme</header>
       <Charts statementsAndRent={statementsAndRent} members={members}/> 
-      <div style={{display:"flex", alignItems:"flex-start", justifyContent:"space-between"}}>
+      <div style={{display:"flex", alignItems:"flex-start", justifyContent:"center", flexWrap:"wrap"}}>
         <div style={{margin:20}}>
           <h3>Contract</h3>
           <InputSlider value={purchaseAmount/1000} setValue={(value)=>setPurchaseAmount(value*1000)} title="Purchase Amount (k)" min={10} max={1_000} step={10}/>

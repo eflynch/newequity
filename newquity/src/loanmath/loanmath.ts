@@ -34,6 +34,7 @@ export type RentStatement = {
     targetEquity:dollar,
     excessEquity:Map<Member, dollar>,
     mortgagePrincipalAdjustment:dollar;
+    oneTimeBill:Map<Member, dollar>;
     bill:Map<Member, dollar>;
     equityAdjustment:Map<Member, dollar>;
 };
@@ -112,7 +113,10 @@ export const computeRentStatement = (month:month, loan:Loan, members:Member[], e
     const bill = new Map<Member, dollar>(members.map(m=>[m,
         (principalRent.get(m) || 0)
         + (adjustmentRent.get(m) || 0)
-        + (m.moveInMonth == month ? m.buyIn : 0)
+    ]));
+
+    const oneTimeBill = new Map<Member, dollar>(members.map(m=>[m,
+        (m.moveInMonth == month ? m.buyIn : 0)
         - (positiveExcessEquityTransfer.get(m) || 0)
     ]));
 
@@ -125,6 +129,7 @@ export const computeRentStatement = (month:month, loan:Loan, members:Member[], e
         targetEquity:targetEquityPostTransfer,
         excessEquity:excessEquityPostTransfer,
         mortgagePrincipalAdjustment:principalPaid+principalEquityTransfer,
+        oneTimeBill:oneTimeBill,
         bill:bill,
         equityAdjustment:equityAdjustment
     } as RentStatement;

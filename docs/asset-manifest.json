@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/newquity/static/css/main.1233b2cd.css",
-    "main.js": "/newquity/static/js/main.feb91688.js",
+    "main.js": "/newquity/static/js/main.0c8bd270.js",
     "static/js/787.bec276c7.chunk.js": "/newquity/static/js/787.bec276c7.chunk.js",
     "index.html": "/newquity/index.html",
     "main.1233b2cd.css.map": "/newquity/static/css/main.1233b2cd.css.map",
-    "main.feb91688.js.map": "/newquity/static/js/main.feb91688.js.map",
+    "main.0c8bd270.js.map": "/newquity/static/js/main.0c8bd270.js.map",
     "787.bec276c7.chunk.js.map": "/newquity/static/js/787.bec276c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1233b2cd.css",
-    "static/js/main.feb91688.js"
+    "static/js/main.0c8bd270.js"
   ]
 }

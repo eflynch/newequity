@@ -12,7 +12,7 @@ function MonthEntry(props:MonthEntryProps):ReactElement {
 return (
     <tr>
     <td>{props.month}</td>
-    {props.members.map((m)=><td>{props.rent.bill.get(m)?.toFixed(2) || 0}</td>)}
+    {props.members.map((m)=><td>{((props.rent.bill.get(m)||0)+ (props.rent.oneTimeBill.get(m)||0)).toFixed(2)}</td>)}
     {props.members.map((m)=><td>{props.statement.equity.get(m)?.toFixed(2) || 0}</td>)}
     <td>{props.statement.mortgagePrincipal.toFixed(2)}</td>
     </tr>

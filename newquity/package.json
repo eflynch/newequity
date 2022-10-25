@@ -1,6 +1,7 @@
 {
   "name": "newquity",
   "version": "0.1.0",
+  "homepage": "https://evanlyn.ch/newquity",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
